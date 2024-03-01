@@ -60,23 +60,23 @@ img{
 .showcase-top{
   position:relative;
   z-index: 2;
-  height: 90px;
+  height: 88px;
 }
 
 .link {
 	position: absolute;
 	top: 50%;
-	right: 0;
+	right: 7%;
 	transform: translate(-50%, -50%);
 }
 
 .showcase-top img {
-	width: 170px;
+	width: 150px;
 	position: absolute;
   top: 50%;
-  right: 80%;
+  left: 16.3%;
   transform: translate(-50%, -50%);
-	margin-left: 0;
+	/* margin-left: 0; */
 }
 
 .select-with-fa {
@@ -87,11 +87,13 @@ img{
   .select-with-fa select {
     height: 30px;
     padding-left: 30px;
+    margin-right: 1rem;
   }
   
   .select-with-fa i {
     position: absolute;
-    left: 10px;
-    top: 7px;
+    left: 5px;
+    top: 8px;
+    color: #000;
     pointer-events: none;
   }
