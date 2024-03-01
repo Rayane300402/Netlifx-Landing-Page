@@ -1,0 +1,18 @@
+.select-with-fa {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Style the select box */
+  .select-with-fa select {
+    height: 30px;
+    padding-left: 30px;
+  }
+  
+  /* Style the icon */
+  .select-with-fa i {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    pointer-events: none;
+  }
