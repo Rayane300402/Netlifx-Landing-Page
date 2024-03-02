@@ -63,9 +63,37 @@ img{
 
 .showcase-top img {
 	width: 170px;
-	position: absolute;
+	position: absolute; /* so we can position it inside its closest part element which is showcase top and not showcase */
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	margin-left: 0;
+}
+
+.link{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+}
+
+
+/* buttons */
+.btn{
+    display: inline-block;
+    padding: 0.4rem 1.3rem;
+    background: var(--primary-color);
+    text-align: center;
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+    outline: none;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+    transition: opacity 0.3s ease
+}
+
+.btn:hover{
+    opacity: 0.9;
 }

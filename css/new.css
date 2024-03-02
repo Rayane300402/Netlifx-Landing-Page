@@ -72,28 +72,58 @@ img{
 
 .showcase-top img {
 	width: 150px;
-	position: absolute;
+	position: absolute; /* so we can position it inside its closest part element which is showcase top and not showcase */
   top: 50%;
   left: 16.3%;
   transform: translate(-50%, -50%);
 	/* margin-left: 0; */
 }
 
+/* buttons */
+.btn{
+  display: inline-block;
+  padding: 0.4rem 1.3rem;
+  background: var(--primary-color);
+  text-align: center;
+  font-size: 0.9rem;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  /* margin-right: 0.5rem; */
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  transition: background 0.3s ease
+}
+
+.btn:hover{
+ background: #b40b13;
+}
+
+/* language selector */
 .select-with-fa {
     position: relative;
     display: inline-block;
+    flex-direction: row;
   }
   
   .select-with-fa select {
-    height: 30px;
-    padding-left: 30px;
+    border: 0.5px solid #ffffff9c;
+    padding: 0.28rem 1rem;
     margin-right: 1rem;
+    background-color: transparent;
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;    color: #fff;
+    font-size: 1rem;
+    border-radius: 3px;
   }
-  
-  .select-with-fa i {
-    position: absolute;
-    left: 5px;
-    top: 8px;
-    color: #000;
-    pointer-events: none;
+
+  .select-with-fa option{
+    color:initial;
+    background: initial;
   }
