@@ -1,52 +1,61 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 
-:root{
+:root {
   --primary-color: #e50914;
 }
 
-*{
+* {
   box-sizing: border-box; /* so the padding does not affect the width */
   margin: 0;
   padding: 0;
 }
 
-body{
-  font-family: 'Ariel', sans-serif;
+body {
+  font-family: "Ariel", sans-serif;
   --webkit-font-smoothing: antialiased; /* for better font rendering */
   background-color: #000;
-  color: #dce2e2
+  color: #dce2e2;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
   color: #fff;
 }
 
-a{
+a {
   text-decoration: none;
   color: #fff;
 }
 
-p{
+p {
   margin: 0.5rem 0; /* 1rem === 16px which is the default  */
 }
 
-img{
+img {
   width: 100%;
 }
 
-.showcase{
+.hide{
+  /* display: none; */
+  visibility: hidden;
+}
+
+.showcase {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: url('https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/292e6261-2eed-454a-996a-a1dd8edad6ce/LB-en-20240226-popsignuptwoweeks-perspective_alpha_website_small.jpg') no-repeat center center/cover;
+  background: url("https://assets.nflxext.com/ffe/siteui/vlv3/93da5c27-be66-427c-8b72-5cb39d275279/292e6261-2eed-454a-996a-a1dd8edad6ce/LB-en-20240226-popsignuptwoweeks-perspective_alpha_website_small.jpg")
+    no-repeat center center/cover;
 }
 
-.showcase::after{
-  content: '';
+.showcase::after {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -57,30 +66,30 @@ img{
   box-shadow: inset 0px 50px 100px #000000, inset 0px -50px 100px #000000;
 }
 
-.showcase-top{
-  position:relative;
+.showcase-top {
+  position: relative;
   z-index: 2;
   height: 88px;
 }
 
 .link {
-	position: absolute;
-	top: 50%;
-	right: 7%;
-	transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  right: 7%;
+  transform: translate(-50%, -50%);
 }
 
 .showcase-top img {
-	width: 150px;
-	position: absolute; /* so we can position it inside its closest part element which is showcase top and not showcase */
+  width: 150px;
+  position: absolute; /* so we can position it inside its closest part element which is showcase top and not showcase */
   top: 50%;
   left: 16.3%;
   transform: translate(-50%, -50%);
-	/* margin-left: 0; */
+  /* margin-left: 0; */
 }
 
 /* buttons */
-.btn{
+.btn {
   display: inline-block;
   padding: 0.4rem 1.3rem;
   background: var(--primary-color);
@@ -91,62 +100,139 @@ img{
   border-radius: 3px;
   outline: none;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-  transition: background 0.3s ease
+  transition: background 0.3s ease;
 }
 
-.btn:hover{
- background: #b40b13;
+.btn:hover {
+  background: #b40b13;
 }
 
-.btn-xl{
-  font-size: 1.3rem;
-  padding: 1rem 2rem;
+.btn-xl {
+  font-size: 1.1rem;
+  padding: 1.2rem 2rem;
 }
 
-/* email inout field */
-.add-email{
+/* content showcase */
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 12rem;
+}
+
+h1{
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+h4{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+
+}
+
+/* email input field */
+.add-email {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-  /* margin-top: 1rem; */}
-
-.email{
-  font-size: 1rem;
-  padding: 1.1rem 2rem;
-  margin-right:8px;
-  width: 20%;
-  background-color: #000;
-  opacity: 0.5;
-  border:2px solid #fffffff1;
-  border-radius: 3px;
-  color:#ffffff9c
 }
 
+.email {
+  font-size: 1rem;
+  padding: 1.2rem 1rem;
+  margin-right: 8px;
+  width: 25rem;
+  background-color: #0000007a;
+  border: 1px solid #ffffff8e;
+  border-radius: 3px;
+  color: #ffffff;
+  outline: none;
+}
+
+.email:focus{
+  border: 1px solid #ffffff;
+  outline: none;
+  font-size: 1rem;;
+}
+
+.email.invalid{
+  border: 1px solid var(--primary-color);
+
+}
+
+.email:focus + .placeholder {
+  top: 0.3rem;
+  left: 1rem;
+  font-size: 0.7rem;
+}
+
+.placeholder.has-content{
+  top: 0.3rem;
+  left: 1rem;
+  font-size: 0.7rem;
+}
+
+.placeholder {
+  color: #ffffff8e;
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.warning{
+  position: absolute;
+  top: 3.5rem;
+  font-size: 0.8rem;
+  color: var(--primary-color);
+}
 /* language selector */
 .select-with-fa {
-    position: relative;
-    display: inline-block;
-    flex-direction: row;
-  }
-  
-  .select-with-fa select {
-    border: 0.5px solid #ffffff9c;
-    padding: 0.28rem 1rem;
-    margin-right: 1rem;
-    background-color: transparent;
-    background-position-x: 0%;
-    background-position-y: 0%;
-    background-repeat: repeat;
-    background-attachment: scroll;
-    background-image: none;
-    background-size: auto;
-    background-origin: padding-box;
-    background-clip: border-box;    color: #fff;
-    font-size: 1rem;
-    border-radius: 3px;
-  }
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+}
 
-  .select-with-fa option{
-    color:initial;
-    background: initial;
-  }
+.select-with-fa select {
+  border: 0.5px solid #ffffff9c;
+  padding: 0.28rem 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: none;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+.select-with-fa option {
+  color: initial;
+  background: initial;
+}
+
+
