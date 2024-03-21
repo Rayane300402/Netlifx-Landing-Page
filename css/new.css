@@ -89,7 +89,6 @@ img{
   color: #fff;
   border: none;
   border-radius: 3px;
-  /* margin-right: 0.5rem; */
   outline: none;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
   transition: background 0.3s ease
@@ -97,6 +96,30 @@ img{
 
 .btn:hover{
  background: #b40b13;
+}
+
+.btn-xl{
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+}
+
+/* email inout field */
+.add-email{
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* margin-top: 1rem; */}
+
+.email{
+  font-size: 1rem;
+  padding: 1.1rem 2rem;
+  margin-right:8px;
+  width: 20%;
+  background-color: #000;
+  opacity: 0.5;
+  border:2px solid #fffffff1;
+  border-radius: 3px;
+  color:#ffffff9c
 }
 
 /* language selector */

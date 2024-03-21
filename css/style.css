@@ -97,3 +97,13 @@ img{
 .btn:hover{
     opacity: 0.9;
 }
+
+.btn-rounded{
+    border-radius: 5px;
+}
+
+.btn-xl{
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    text-transform: uppercase;
+}
