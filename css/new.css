@@ -126,20 +126,20 @@ img {
   margin-top: 12rem;
 }
 
-h1{
+.showcase-content h1{
   font-size: 2.7rem;
   margin-bottom: 1rem;
   font-weight: 900;
   white-space: nowrap;
 }
 
-h4{
+.showcase-content h4{
   font-size: 1.5rem;
   margin-bottom: 1rem;
   font-weight: lighter;
 }
 
-p{
+.showcase-content p{
   font-size: 1.2rem;
   margin-bottom: 1rem;
   font-weight: lighter;

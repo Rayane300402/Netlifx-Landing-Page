@@ -1,109 +1,148 @@
-:root{
-    --primary-color: #e50914;
+:root {
+  --primary-color: #e50914;
 }
 
-*{
-    box-sizing: border-box; /* so the padding does not affect the width */
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box; /* so the padding does not affect the width */
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: 'Ariel', sans-serif;
-    --webkit-font-smoothing: antialiased; /* for better font rendering */
-    background-color: #000;
-    color: #dce2e2
+body {
+  font-family: "Ariel", sans-serif;
+  --webkit-font-smoothing: antialiased; /* for better font rendering */
+  background-color: #000;
+  color: #dce2e2;
 }
 
-ul{
-    list-style: none;
+ul {
+  list-style: none;
 }
 
-h1, h2, h3, h4{
-    color: #fff;
+h1,
+h2,
+h3,
+h4 {
+  color: #fff;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
+a {
+  text-decoration: none;
+  color: #fff;
 }
 
-p{
-    margin: 0.5rem 0; /* 1rem === 16px which is the default  */
+p {
+  margin: 0.5rem 0; /* 1rem === 16px which is the default  */
 }
 
-img{
-    width: 100%;
+img {
+  width: 100%;
 }
 
-.showcase{
-    width: 100%;
-    height: 93vh;
-    position: relative; /* cz we're gonna position some stuff as absolute */
-    background: url('https://i.ibb.co/vXqDmnh/background.jpg') no-repeat center center/cover;
+.showcase {
+  width: 100%;
+  height: 93vh;
+  position: relative; /* cz we're gonna position some stuff as absolute */
+  background: url("https://i.ibb.co/vXqDmnh/background.jpg") no-repeat center
+    center/cover;
 }
 
+/* ghost element */
 .showcase::after {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	z-index: 1;
-	background: rgba(0, 0, 0, 0.6);
-	box-shadow: inset 100px 100px 250px #000000, inset -120px -100px 250px #000000;
+  content: "";   /* this is a must be added no matter what */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 100px 100px 250px #000000, inset -100px -100px 250px #000000;
 }
+/* ghost element */
 
 .showcase-top {
-	position: relative;
-	z-index: 2;
-	height: 90px;
+  position: relative;
+  z-index: 2;
+  height: 90px;
 }
 
 .showcase-top img {
-	width: 170px;
-	position: absolute; /* so we can position it inside its closest part element which is showcase top and not showcase */
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	margin-left: 0;
+  width: 170px;
+  position: absolute; /* so we can position it inside its closest part element which is showcase top and not showcase */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-left: 0;
 }
 
-.link{
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translate(-50%, -50%);
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 7rem;
 }
 
+.showcase-content h1{
+    font-weight: 900;
+    font-size:  5.2rem;
+    line-height: 1.1;
+    margin:0 0 1rem;
+}
+
+.showcase-content p{
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0 0 2rem;
+}
+
+.link {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
+}
 
 /* buttons */
-.btn{
-    display: inline-block;
-    padding: 0.4rem 1.3rem;
-    background: var(--primary-color);
-    text-align: center;
-    font-size: 1rem;
-    color: #fff;
-    border: none;
-    border-radius: 3px;
-    margin-right: 0.5rem;
-    outline: none;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
-    transition: opacity 0.3s ease
+.btn {
+  display: inline-block;
+  padding: 0.4rem 1.3rem;
+  background: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  margin-right: 0.5rem;
+  outline: none;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.45);
+  transition: opacity 0.3s ease;
 }
 
-.btn:hover{
-    opacity: 0.9;
+.btn:hover {
+  opacity: 0.9;
 }
 
-.btn-rounded{
-    border-radius: 5px;
+.btn-rounded {
+  border-radius: 5px;
 }
 
-.btn-xl{
-    font-size: 1.5rem;
-    padding: 1.5rem 2rem;
-    text-transform: uppercase;
+.btn-xl {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  text-transform: uppercase;
+}
+
+.btn-lg {
+  font-size: 1rem;
+  padding: 0.8rem 1.3rem;
+  text-transform: uppercase;
 }
