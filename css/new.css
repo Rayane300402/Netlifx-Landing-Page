@@ -111,12 +111,12 @@ img {
   margin-left: 9rem;
 }
 
-.tabs .container .container-1 h1{
+.tabs .container .container-1 h1, .tabs .container .container-4 h1, .tabs .container .container-5 h1{
   font-size: 3rem;
   font-weight: 900;
 }
 
-.tabs .container .container-1 p{
+.tabs .container .container-1 p, .tabs .container .container-4 p, .tabs .container .container-5 p{
   font-size: 1.5rem;
   font-weight: 500;
 }
@@ -153,6 +153,65 @@ img {
 .play-video img{
   display: inline-block;
   vertical-align: baseline;
+}
+
+.tabs .container .container-3{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-display{
+  position: relative;
+}
+
+.loading{
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  bottom: 8%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  margin: 0 auto;
+  background: rgb(0,0,0);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 60%;
+  min-width: 15rem;
+  padding: 0.25rem 0.65rem;
+  border: 2px solid rgba(128,128,128,0.7);
+  box-shadow: 0 0 2em 0 rgb(0,0,0);
+  border-radius: 0.75rem;
+  z-index: 1;
+}
+
+.loading .img img{
+  height: 4.5rem;
+}
+
+.text{
+  padding-left: 1rem;
+}
+
+.stranger{
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.download{
+  font-weight: 400;
+  color: #0071eb;
+  font-size: 0.875rem;
 }
 
 /* buttons */

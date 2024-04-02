@@ -50,7 +50,7 @@ img {
 
 /* ghost element */
 .showcase::after {
-  content: "";   /* this is a must be added no matter what */
+  content: ""; /* this is a must be added no matter what */
   position: absolute;
   top: 0;
   left: 0;
@@ -90,19 +90,19 @@ img {
   margin-top: 7rem;
 }
 
-.showcase-content h1{
-    font-weight: 900;
-    font-size:  5.2rem;
-    line-height: 1.1;
-    margin:0 0 1rem;
+.showcase-content h1 {
+  font-weight: 900;
+  font-size: 5.2rem;
+  line-height: 1.1;
+  margin: 0 0 1rem;
 }
 
-.showcase-content p{
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: 400;
-    line-height: 1.25;
-    margin: 0 0 2rem;
+.showcase-content p {
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.25;
+  margin: 0 0 2rem;
 }
 
 .link {
@@ -113,15 +113,27 @@ img {
 }
 
 /* tabs */
-.tabs{
-    background-color: var(--dark-color);
-    padding-top:1rem;
-    border-bottom: 3px solid #3d3d3d;
+.tabs {
+  background-color: var(--dark-color);
+  padding-top: 1rem;
+  border-bottom: 3px solid #3d3d3d;
 }
 
-.tabs .container{
-    display:grid;
-    grid-template-columns: repeat(3,1fr);
+.tabs .container {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Conatiner */
+.container{
+  max-width:70%;
+  margin:auto;
+  overflow:hidden;
+  padding: 0 2rem;
 }
 
 /* buttons */
