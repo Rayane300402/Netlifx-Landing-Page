@@ -313,6 +313,46 @@ img {
   height: 4.5rem;
 }
 
+/* for footer width should be 70% only and yeah we use uls + before ul and after ul we add questions thingy then language changers and netlfix lebanon, then we grid the ul which is inside a div  */
+.footer{
+  max-width: 75%;
+	margin: 1rem auto;
+	overflow: auto;
+}
+
+.footer,
+.footer a {
+	color: #999;
+	font-size: 0.9rem;
+}
+
+.footer a {
+  text-decoration: underline;
+}
+
+.footer,
+.footer a:hover{
+  color: #fff;
+}
+
+.footer p {
+	margin-bottom: 4rem;
+  color: #999;
+}
+
+.footer .footer-cols{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+  margin-top: 1rem;
+}
+
+.footer li {
+	line-height: 2rem;
+}
+
+
+
 /* text */
 .text-xl{
   font-size: 3rem;
@@ -367,3 +407,5 @@ img {
 
 
 /* add media query here */
+/* at small sizes should be stacked not next to each other like a column so we set grid to 1fr */
+/* minimize text suzize for all more or less */
