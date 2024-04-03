@@ -42,7 +42,6 @@ img {
 }
 
 .hide{
-  /* display: none; */
   visibility: hidden;
 }
 
@@ -86,6 +85,131 @@ img {
   left: 16.3%;
   transform: translate(-50%, -50%);
   /* margin-left: 0; */
+}
+
+/* language selector */
+.select-with-fa {
+  position: relative;
+  display: inline-block;
+  flex-direction: row;
+}
+
+.select-with-fa select {
+  border: 0.5px solid #ffffff9c;
+  padding: 0.28rem 1rem;
+  margin-right: 1rem;
+  background-color: transparent;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-repeat: repeat;
+  background-attachment: scroll;
+  background-image: none;
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  color: #fff;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+
+.select-with-fa option {
+  color: initial;
+  background: initial;
+}
+
+/* content showcase */
+.showcase-content {
+  position: relative;
+  z-index: 2;
+  width: 65%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 12rem;
+}
+
+.showcase-content h1{
+  font-size: 2.7rem;
+  margin-bottom: 1rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.showcase-content h4{
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+}
+
+.showcase-content p{
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  font-weight: lighter;
+
+}
+
+
+/* email input field */
+.add-email {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.email {
+  font-size: 1rem;
+  padding: 1.2rem 1rem;
+  margin-right: 8px;
+  width: 25rem;
+  background-color: #0000007a;
+  border: 1px solid #ffffff8e;
+  border-radius: 3px;
+  color: #ffffff;
+  outline: none;
+}
+
+.email:focus{
+  border: 1px solid #ffffff;
+  outline: none;
+  font-size: 1rem;;
+}
+
+.email.invalid{
+  border: 1px solid var(--primary-color);
+
+}
+
+.email:focus + .placeholder {
+  top: 0.3rem;
+  left: 1rem;
+  font-size: 0.7rem;
+}
+
+.placeholder.has-content{
+  top: 0.3rem;
+  left: 1rem;
+  font-size: 0.7rem;
+}
+
+.placeholder {
+  color: #ffffff8e;
+  position: absolute;
+  top: 1.2rem;
+  left: 1rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.warning{
+  position: absolute;
+  top: 3.5rem;
+  font-size: 0.8rem !important;
+  color: var(--primary-color);
 }
 
 /* tabs */
@@ -240,127 +364,6 @@ img {
   padding: 1.2rem 2rem;
 }
 
-/* content showcase */
-.showcase-content {
-  position: relative;
-  z-index: 2;
-  width: 65%;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 12rem;
-}
-
-.showcase-content h1{
-  font-size: 2.7rem;
-  margin-bottom: 1rem;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.showcase-content h4{
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-  font-weight: lighter;
-}
-
-.showcase-content p{
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-  font-weight: lighter;
-
-}
-
-/* email input field */
-.add-email {
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.email {
-  font-size: 1rem;
-  padding: 1.2rem 1rem;
-  margin-right: 8px;
-  width: 25rem;
-  background-color: #0000007a;
-  border: 1px solid #ffffff8e;
-  border-radius: 3px;
-  color: #ffffff;
-  outline: none;
-}
-
-.email:focus{
-  border: 1px solid #ffffff;
-  outline: none;
-  font-size: 1rem;;
-}
-
-.email.invalid{
-  border: 1px solid var(--primary-color);
-
-}
-
-.email:focus + .placeholder {
-  top: 0.3rem;
-  left: 1rem;
-  font-size: 0.7rem;
-}
-
-.placeholder.has-content{
-  top: 0.3rem;
-  left: 1rem;
-  font-size: 0.7rem;
-}
-
-.placeholder {
-  color: #ffffff8e;
-  position: absolute;
-  top: 1.2rem;
-  left: 1rem;
-  font-size: 1rem;
-  transition: 0.3s;
-  pointer-events: none;
-}
-
-.warning{
-  position: absolute;
-  top: 3.5rem;
-  font-size: 0.8rem !important;
-  color: var(--primary-color);
-}
-/* language selector */
-.select-with-fa {
-  position: relative;
-  display: inline-block;
-  flex-direction: row;
-}
-
-.select-with-fa select {
-  border: 0.5px solid #ffffff9c;
-  padding: 0.28rem 1rem;
-  margin-right: 1rem;
-  background-color: transparent;
-  background-position-x: 0%;
-  background-position-y: 0%;
-  background-repeat: repeat;
-  background-attachment: scroll;
-  background-image: none;
-  background-size: auto;
-  background-origin: padding-box;
-  background-clip: border-box;
-  color: #fff;
-  font-size: 1rem;
-  border-radius: 3px;
-}
-
-.select-with-fa option {
-  color: initial;
-  background: initial;
-}
 
 
+/* add media query here */
