@@ -135,7 +135,7 @@ img {
   font-size: 2.7rem;
   margin-bottom: 1rem;
   font-weight: 900;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
 
 .showcase-content h4{
@@ -229,13 +229,27 @@ img {
   padding: 0 1rem;
 }
 
+@media (max-width: 700px) {
+  .tabs .container{
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .tabs .container .container-1{
+    margin: auto !important;
+  }
+}
+
 .tabs .container .container-1{
+  position: relative;
   display:flex;
   flex-direction: column;
   margin-left: 9rem;
 }
 
 .tabs .container .container-2{
+  position: relative;
+
   display:flex;
 }
 
@@ -402,8 +416,80 @@ img {
 .btn-xl {
   font-size: 1.1rem;
   padding: 1.2rem 2rem;
+  white-space: nowrap;
 }
 
+
+@media (max-width: 960px) {
+
+.showcase-content h1 {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.showcase-content p {
+  font-size: 1.5rem;
+}
+
+.footer .footer-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.btn-xl {
+  font-size: 1rem;
+  padding: 1.4rem 2rem;
+  text-transform: uppercase;
+}
+
+.text-xl {
+  font-size: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.text-md {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.add-email{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+}
+
+@media (max-width: 700px) {
+.showcase::after {
+  background: rgba(0, 0, 0, 0.6);
+  box-shadow: inset 80px 80px 150px #000000, inset -80px -80px 150px #000000;
+}
+
+.showcase-content h1 {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.showcase-content p {
+  font-size: 1rem;
+}
+
+.btn-xl {
+  font-size: 1.1rem;
+  padding: 1.2rem 1.6rem;
+  text-transform: uppercase;
+}
+}
+
+@media(max-height: 600px) {
+.showcase-content {
+margin-top: 3rem;
+}
+}
 
 
 /* add media query here */
