@@ -205,6 +205,22 @@ img {
   pointer-events: none;
 }
 
+#email-2:focus + .placeholder2{
+  top: 0.3rem;
+  left: 31rem;
+  font-size: 0.7rem;
+}
+
+.placeholder2{
+  color: #ffffff8e;
+  position: absolute;
+  top: 1.2rem;
+  left: 31rem;
+  font-size: 1rem;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
 .warning{
   position: absolute;
   top: 3.5rem;
@@ -235,12 +251,12 @@ img {
     text-align: center;
   }
 
-  .tabs .container .container-1{
+  .tabs .container .container-1, .tabs .container .container-5 {
     margin: auto !important;
   }
 }
 
-.tabs .container .container-1{
+.tabs .container .container-1, .tabs .container .container-5 {
   position: relative;
   display:flex;
   flex-direction: column;
@@ -278,7 +294,7 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.play-video img{
+.play-video img, .play-video video{
   display: inline-block;
   vertical-align: baseline;
 }
@@ -327,10 +343,20 @@ img {
   height: 4.5rem;
 }
 
+/* FAQ */
+
+.faq{
+  padding: 2rem 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 /* for footer width should be 70% only and yeah we use uls + before ul and after ul we add questions thingy then language changers and netlfix lebanon, then we grid the ul which is inside a div  */
 .footer{
   max-width: 75%;
-	margin: 1rem auto;
+	margin: 2rem auto;
 	overflow: auto;
 }
 
@@ -350,7 +376,7 @@ img {
 }
 
 .footer p {
-	margin-bottom: 4rem;
+	margin-bottom: 3rem;
   color: #999;
 }
 
