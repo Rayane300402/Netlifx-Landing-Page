@@ -149,6 +149,10 @@ img {
   border-bottom: var(--primary-color) 3px solid;
 }
 
+.tabs .container  > .tab-border{
+  color: white !important;
+}
+
 /*  Tab Content */
 .tab-content{
   padding: 3rem 0;
@@ -167,7 +171,6 @@ img {
 .show {
 	display: block !important;
 	opacity: 1 !important;
-	transition: all 1000 ease-in;
 }
 
 #tab-1-content .tab-1-content-inner{
