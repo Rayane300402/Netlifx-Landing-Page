@@ -80,3 +80,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const accordion = document.querySelectorAll('input[type="radio"][name="accordion"]')
+  const faqSection = document.querySelector(".faq_height")
+  console.log(faqSection)
+  accordion.forEach((item) => {
+    if (item.checked) {
+      document.querySelector(`label[for="${item.id}"] span`).classList.add("rotated")
+      // faqSection.classList.add('expanded')
+    } else{
+      document.querySelector(`label[for="${item.id}"] span`).classList.remove("rotated")
+      // faqSection.classList.remove('expanded')
+    }
+    item.addEventListener("change", () => {
+      accordion.forEach((item) => {
+        document.querySelector(`label[for="${item.id}"] span`).classList.remove("rotated")
+        // faqSection.classList.remove('expanded')
+
+      })
+      document.querySelector(`label[for="${item.id}"] span`).classList.add("rotated")
+      // faqSection.classList.add('expanded')
+
+    })
+  })
+}) 

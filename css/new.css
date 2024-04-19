@@ -223,6 +223,13 @@ img {
 }
 
 /* tabs */
+.faq_height{
+  padding-top:1rem;
+  border-bottom: 8px solid #4b494975 !important;
+  border-top: 8px solid #4b494975;
+   height: 45rem !important;
+}
+
 .tabs{
   padding-top:1rem;
   border-top: 8px solid #4b494975;
@@ -341,15 +348,67 @@ img {
 
 .faq{
   position: relative;
-  padding: 2rem 0;
-  width: 65%;
+  padding: 1rem 0;
+  width: 80%;
   margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  /* height: 100%; */
 }
+
+#accordion{
+  width: 100%;
+}
+
+#accordion li{
+  padding: 10px 30px;
+  list-style: none;
+  width: 100%;
+  margin-bottom: 10px;
+  background: #2d2d2d;
+}
+
+#accordion li label, #accordion li .content{
+  font-size: 1.5rem;
+}
+
+#accordion li label{
+  padding: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+#accordion li label span{
+  font-size: 2rem;
+  font-weight: 200;
+  transition: transform 0.3s ease-in-out;
+  /* transform: rotate(45deg); */
+}
+
+.rotated {
+  transform: rotate(45deg) !important;
+}
+
+#accordion li label + input[type="radio"]{
+  display: none;
+}
+
+#accordion .content{
+  line-height: 26px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s;
+}
+
+#accordion li label + input[type="radio"]:checked + .content{
+  max-height: 400px;
+}
+
 
 /* for footer width should be 70% only and yeah we use uls + before ul and after ul we add questions thingy then language changers and netlfix lebanon, then we grid the ul which is inside a div  */
 .footer{
@@ -401,6 +460,11 @@ img {
 .text-lg{
   font-size: 1.5rem;
   font-weight: 500;
+}
+
+.text-md{
+  font-size: 1.3rem;
+  font-weight: 400;
 }
 
 .text{
